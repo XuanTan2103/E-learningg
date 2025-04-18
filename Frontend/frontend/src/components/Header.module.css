@@ -1,0 +1,197 @@
+/* Đặt font chữ cho toàn bộ header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 50px;
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000
+}
+
+/* Phần bên trái chứa E-learning */
+.leftSection {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.elearning {
+    height: 50px;
+    width: auto;
+}
+
+/* Phần bên phải chứa menu và thông tin người dùng */
+.rightSection {
+    display: flex;
+    align-items: center;
+}
+
+/* Menu lựa chọn */
+.nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navItem {
+    
+    padding: 5px 10px;
+    color: rgb(94, 90, 90);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navItem:hover {
+    color: black;
+}
+
+/* Thông tin người dùng */
+.userInfo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.username {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+}
+
+.logout {
+    border: none;
+    padding: 5px 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout i {
+    font-size: 20px;
+    color: rgb(94, 90, 90);
+    margin-left: 10px;
+}
+
+.logout i:hover {
+    font-size: 20px;
+    color: black;
+}
+/* Bọc icon chuông và dropdown thông báo */
+.notificationWrapper {
+    position: relative;
+}
+
+/* Chuông thông báo */
+.notification {
+    margin-right: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+}
+
+/* Dropdown hiển thị thông báo */
+.notificationDropdown {
+    position: absolute;
+    top: 40px; /* Dịch xuống dưới chuông */
+    right: 0;
+    width: 350px; /* Độ rộng thông báo */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Khi click ra ngoài, dropdown sẽ ẩn đi */
+.notificationDropdown::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+.navToggle {
+    display: none;
+}
+
+/* Responsive cho Header */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 10px;
+        height: 50px;
+    }
+
+    .elearning {
+        width: 80px;
+        height: auto;
+    }
+
+    .rightSection {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Hiển thị nút menu trên mobile */
+    .navToggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+        margin-right: 15px;
+    }
+
+    /* Ẩn menu mặc định */
+    .nav ul {
+        display: none;
+    }
+
+    /* Khi menu mở, hiển thị */
+    .nav.open ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20%;
+        background: white;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav.open ul li {
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+    .nav.open li:hover {
+        background-color: #bababa;
+    }
+
+    .nav.open ul li:last-child {
+        border-bottom: none;
+    }
+}

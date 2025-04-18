@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.scheduleContainer {
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.title {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.scheduleTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+.scheduleTable th,
+.scheduleTable td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.scheduleTable th {
+  background-color: #3578c0;
+  color: white;
+  font-weight: bold;
+}
+
+.scheduleTable tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.scheduleTable tbody tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+.scheduleTable td {
+  height: 80px;
+  min-width: 100px;
+}
+
+.timeSlot {
+  background-color: #3578c0;
+  color: white;
+  font-weight: bold;
+}
+
+.scheduleCell {
+  position: relative;
+}
+
+.scheduleItem {
+  background-color: #ffc107;
+  color: #333;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.scheduleItem strong {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.scheduleItem div {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.datePicker {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.scheduleTable th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.scheduleTable th:last-child {
+  border-top-right-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .scheduleTable th, .scheduleTable td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .scheduleItem {
+    font-size: 10px;
+    padding: 2px;
+  }
+
+  .scheduleItem strong {
+    font-size: 12px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .datePicker {
+    margin-bottom: 15px;
+  }
+
+  .timeSlot {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scheduleTable {
+    font-size: 10px;
+  }
+
+  .scheduleTable th, .scheduleTable td {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .scheduleItem div{
+    font-size: 5px !important;
+    padding: 2px;
+  }
+
+  .scheduleItem strong {
+    font-size: 6px !important;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .scheduleContainer {
+    padding: 10px;
+  }
+}

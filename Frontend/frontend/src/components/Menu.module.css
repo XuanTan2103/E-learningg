@@ -1,0 +1,162 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  height: 100vh;
+  font-size: 13px;
+  transition: width 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Khi menu được collapse, giảm chiều rộng */
+.collapsed {
+  width: 4%;
+}
+
+.sidebar i {
+  padding-right: 10px;
+  color: rgb(62, 149, 255);
+}
+
+.top {
+  padding: 0 10px 10px 10px;
+}
+
+.menu {
+  margin-top: 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none !important;
+  color: black;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.sidebar a:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 8px;
+}
+
+.logo {
+  width: 180px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.bottom {
+  margin-top: 200px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid rgb(222, 222, 222);
+  border-bottom: 1px solid rgb(222, 222, 222);
+  cursor: pointer;
+}
+
+.user:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 8px;
+  border: 1px rgba(0, 123, 255, 0.1);
+}
+
+.user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 5px;
+}
+
+.userName{
+  margin-left: 15px;
+}
+
+.logout {
+  padding: 10px 10px 10px 15px;
+  margin: 20px 10px;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 8px;
+}
+
+/* Style cho nút toggle (btnClose/btnOpen) */
+.toggleBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toggleBtn i {
+  padding: 7px;
+  font-size: 15px;
+  color: black;
+  background-color: rgb(213, 213, 213);
+  cursor: pointer;
+}
+
+.toggleBtn i:hover {
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    width: 100px;
+  }
+  .sidebar {
+    font-size: 9px;
+  }
+  .toggleBtn i {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 80px;
+  }
+  .sidebar {
+    font-size: 8px;
+  }
+  .toggleBtn i {
+    font-size: 12px;
+  }
+  .sidebar a {
+    padding: 10px 0;
+  }
+  .sidebar i {
+    padding-right: 5px;
+  }
+  .user img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0;
+  }
+  .user {
+    padding: 5px;
+  }
+  .logout {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 40px;
+  }
+  .userName{
+    margin-left: 3px;
+  }
+  .collapsed {
+    width: 7%;
+  }
+}
