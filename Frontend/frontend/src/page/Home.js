@@ -38,8 +38,8 @@ function Home() {
       setLoading(true);
       const token = localStorage.getItem("accessToken");
       const url = search
-        ? `http://localhost:8000/blog/search-blog?search=${search}`
-        : "http://localhost:8000/blog/blogs";
+        ? `https://e-learningg-47u8.onrender.com/blog/search-blog?search=${search}`
+        : "https://e-learningg-47u8.onrender.com/blog/blogs";
 
       const response = await axios.get(url, {
         headers: { Authorization: `Bearer ${token}` },

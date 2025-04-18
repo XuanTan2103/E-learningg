@@ -45,7 +45,7 @@ function FirstLogin() {
             const decoded = jwtDecode(token);
             const userId = decoded.id;
             await axios.post(
-                "http://localhost:8000/auth/change-password",
+                "https://e-learningg-47u8.onrender.com/auth/change-password",
                 { userId, oldPassword, newPassword },
                 { headers: { Authorization: `Bearer ${token}` } }
             );

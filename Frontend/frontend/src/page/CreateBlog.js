@@ -96,7 +96,7 @@ function CreateBlog() {
             formData.append("Image", file);
 
             await axios.post(
-                "http://localhost:8000/blog/create-blog",
+                "https://e-learningg-47u8.onrender.com/blog/create-blog",
                 formData,
                 {
                     headers: {

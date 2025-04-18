@@ -33,7 +33,7 @@ function UpdateInformation() {
         }
         try {
             const userId = decoded.id;
-            const res = await axios.get(`http://localhost:8000/user/detail-user/${userId}`, {
+            const res = await axios.get(`https://e-learningg-47u8.onrender.com/user/detail-user/${userId}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
 
